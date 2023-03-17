@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Фільтр OLX",
+  "description": "Фільтр OLX",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.olx.ua/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "Storage.js",
+        "Ad.js",
+        "content.js"
+      ],
+      "css": [
+        "olx.less",
+        "content.less"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "*://www.olx.ua/*"
+  ]
+}
